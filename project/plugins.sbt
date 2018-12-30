@@ -20,8 +20,6 @@ addSbtPlugin("com.typesafe.sbt"  % "sbt-native-packager"  % "1.3.2")
 
 addSbtPlugin("io.get-coursier"   % "sbt-coursier"         % "1.0.0")
 
-addSbtPlugin("io.spray"          % "sbt-revolver"         % "0.9.1")
-
 addSbtPlugin("io.verizon.build"  % "sbt-rig"              % "5.0.39")
 
 addSbtPlugin("org.xerial.sbt"    % "sbt-sonatype"  		  % "2.3")

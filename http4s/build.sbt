@@ -42,8 +42,6 @@ import platypus._
 import platypus.http4s._
 """
 
-buildInfoPackage := "platypus"
-
 scalacOptions ++= List("-Ypartial-unification", "-Ywarn-value-discard")
 
 scalacOptions in (Compile, doc) ++= Seq(

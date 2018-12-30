@@ -28,37 +28,12 @@ scalacOptions += "-Ypartial-unification"
 
 githubOrg := "getnelson"
 
-githubRepoName := "nelson"
+githubRepoName := "platypus"
 
 baseURL in Hugo := {
   if (isTravisBuild.value) new URI(s"https://getnelson.io/")
   else new URI(s"http://127.0.0.1:${previewFixedPort.value.getOrElse(1313)}/")
 }
-
-// dynamically generate a file here that can be automatically
-// imported by hugo as "site data". Doing this here so we don't
-// need to manually update the version every time we bump it.
-// https://gohugo.io/extras/datafiles/
-val hugoGenerateData = taskKey[File]("hugo-generate-data")
-
-hugoGenerateData := {
-  val dest = (sourceDirectory in Hugo).value / "data" / "global.json"
-  IO.write(dest, s"""{"release_version":"${(version in ThisBuild).value}"}""")
-  dest
-}
-
-val latestCLIReleaseData = taskKey[File]("hugo-cli-release-data")
-
-latestCLIReleaseData := {
-  val dest = (sourceDirectory in Hugo).value / "data" / "release.json"
-  val contents = scala.io.Source.fromInputStream(
-    new java.net.URL("https://api.github.com/repos/getnelson/cli/releases/latest"
-    ).openConnection.getInputStream).mkString
-  IO.write(dest, contents)
-  dest
-}
-
-makeSite := makeSite.dependsOn(hugoGenerateData, latestCLIReleaseData).value
 
 import com.typesafe.sbt.SbtGit.GitKeys.{gitBranch, gitRemoteRepo}
 
