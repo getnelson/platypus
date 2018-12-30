@@ -23,7 +23,6 @@ libraryDependencies ++= Seq(
   "org.typelevel"              %% "cats-core"                          % V.cats,
   "org.typelevel"              %% "cats-effect"                        % V.catsEffect,
   "org.typelevel"              %% "cats-free"                          % V.cats,
-  "io.argonaut"                %% "argonaut"                           % V.argonaut,
   "io.verizon.knobs"           %% "core"                               % V.knobs,
   "io.verizon.journal"         %% "core"                               % V.journal,
   "org.typelevel"              %% "cats-kernel-laws"                   % V.cats   % "test"
