@@ -19,6 +19,7 @@ package http4s
 
 import argonaut.Argonaut._
 import cats.effect.IO
+import cats.implicits._
 import com.whisk.docker.scalatest._
 import org.http4s.Uri
 import org.http4s.client.blaze._
