@@ -25,7 +25,7 @@ lazy val platypus = project.in(file(".")).aggregate(core, docs, http4s)
 
 lazy val core = project
 
-lazy val docs = project
+// lazy val docs = project
 
 lazy val http4s = project dependsOn core
 
