@@ -21,7 +21,7 @@ crossScalaVersions in Global := Seq("2.12.4", "2.11.12")
 
 scalaVersion in Global := crossScalaVersions.value.head
 
-lazy val platypus = project.in(file(".")).aggregate(core, docs, http4s)
+lazy val platypus = project.in(file(".")).aggregate(core, http4s)
 
 lazy val core = project
 
