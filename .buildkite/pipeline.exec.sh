@@ -12,7 +12,6 @@ git config --global user.name "Nelson Team"
 export TRAVIS="true" # way hacky
 export TRAVIS_COMMIT="$BUILDKITE_COMMIT"
 export TRAVIS_REPO_SLUG="getnelson/platypus"
-export TRAVIS_JOB_NUMBER="1.1"
 export TRAVIS_BUILD_NUMBER="$BUILDKITE_BUILD_NUMBER"
 
 if [ "${BUILDKITE_PULL_REQUEST:-}" = 'false' ]; then
