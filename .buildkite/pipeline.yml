@@ -28,7 +28,6 @@ steps:
 - label: ":radioactive_sign: teardown"
   command: .buildkite/pipeline.teardown.sh
   branches: master
-  env:
-  - BUILDKITE_CLEAN_CHECKOUT: true
+  timeout_in_minutes: 3
   agents:
     os: linux
