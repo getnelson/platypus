@@ -16,13 +16,13 @@
 //: ----------------------------------------------------------------------------
 
 object V {
-  val http4sArgonaut61 = "0.16.0"
-  val http4s           = "0.18.9"
+  val http4sArgonaut61 = "0.20.0-M4"
+  val http4s           = "0.20.0-M4"
   val journal          = "3.0.18"
   val knobs            = "6.0.33"
   val dockerit         = "0.9.8"
   val argonaut         = "6.2.1"
 
-  val catsEffect       = "0.10.1"
-  val cats             = "1.1.0"
+  val catsEffect       = "1.1.0"
+  val cats             = "1.5.0"
 }
