@@ -21,11 +21,7 @@ enablePlugins(MetadataPlugin, ScalaTestPlugin)
 libraryDependencies ++= Seq(
   dependencies.simulacrum.core,
   "org.typelevel"              %% "cats-core"                          % V.cats,
-  "org.typelevel"              %% "cats-effect"                        % V.catsEffect,
-  "org.typelevel"              %% "cats-free"                          % V.cats,
-  "io.verizon.knobs"           %% "core"                               % V.knobs,
-  "io.verizon.journal"         %% "core"                               % V.journal,
-  "org.typelevel"              %% "cats-kernel-laws"                   % V.cats   % "test"
+  "org.typelevel"              %% "cats-free"                          % V.cats
 )
 
 addCompilerPlugin(dependencies.kindprojector.plugin)
