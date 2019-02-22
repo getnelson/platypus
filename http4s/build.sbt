@@ -20,15 +20,14 @@ enablePlugins(MetadataPlugin, ScalaTestPlugin)
 
 libraryDependencies ++= Seq(
   dependencies.simulacrum.core,
-  "io.verizon.knobs"           %% "core"                               % V.knobs,
-  "io.verizon.journal"         %% "core"                               % V.journal,
   "io.argonaut"                %% "argonaut"                           % V.argonaut,
   "io.argonaut"                %% "argonaut-cats"                      % V.argonaut,
   "org.http4s"                 %% "http4s-argonaut"                    % V.http4s,
   "org.http4s"                 %% "http4s-blaze-client"                % V.http4s,
+  "io.verizon.knobs"           %% "core"                               % V.knobs,
+  "io.verizon.journal"         %% "core"                               % V.journal,
   "com.whisk"                  %% "docker-testkit-scalatest"           % V.dockerit % "test",
-  "com.whisk"                  %% "docker-testkit-impl-spotify"        % V.dockerit % "test",
-  "org.typelevel"              %% "cats-kernel-laws"                   % V.cats   % "test"
+  "com.whisk"                  %% "docker-testkit-impl-spotify"        % V.dockerit % "test"
 )
 
 addCompilerPlugin(dependencies.kindprojector.plugin)
